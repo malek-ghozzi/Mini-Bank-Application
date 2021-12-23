@@ -1,7 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import {logout} from "../../helpers/auth"
+
 
 function Navbaradmin() {
+  const navigate = useNavigate();
+  const handleLogout = (e) => {
+    logout(() => {
+      navigate("/");
+    });
+  };
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -47,9 +55,9 @@ function Navbaradmin() {
             />
             <button
               className="btn btn-outline-success my-2 my-sm-0"
-              type="submit"
+              type="submit" onClick={handleLogout}
             >
-              Search
+              déconnexion
             </button>
           </form>
         </div>

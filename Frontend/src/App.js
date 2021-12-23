@@ -8,13 +8,13 @@ import Login from "./components/Login/Login";
 import Navheader from "./components/Navheader/Navheader";
 import Crediter from "./components/User/Crediter/Crediter";
 import Debiter from "./components/User/Debiter/Debiter";
+import { isAuthenticated } from "./helpers/auth";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* <Navheader/> */}
-        <Navbaradmin />
+        {  isAuthenticated() && <Navbaradmin/> }
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="crediter" element={<Crediter />} />
@@ -22,7 +22,6 @@ function App() {
           <Route path="creer" element={<Creer />} />
           <Route path="comptes" element={<Comptes />} />
           <Route path="transactions" element={<Transactions />} />
-
         </Routes>
       </BrowserRouter>
     </div>
