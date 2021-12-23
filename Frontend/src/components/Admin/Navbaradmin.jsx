@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Navheader() {
+function Navbaradmin() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,20 +23,39 @@ function Navheader() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item ">
-              <Link to="/crediter" className="nav-link">
-                Créditer
+              <Link to="/creer" className="nav-link">
+                Créer un compte
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/debiter" className="nav-link">
-                Débiter
+              <Link to="/comptes" className="nav-link">
+                Affichier les comptes
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/transactions" className="nav-link">
+                Affichier les transactions
               </Link>
             </li>
           </ul>
+          <form className="form-inline my-2 my-lg-0">
+            <input
+              className="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              className="btn btn-outline-success my-2 my-sm-0"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
         </div>
       </nav>
     </div>
   );
 }
 
-export default Navheader;
+export default Navbaradmin;
