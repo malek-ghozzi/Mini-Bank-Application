@@ -14,5 +14,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     <li><p>Express</p></li>
   </ul>
   
+    <h4>Partie Client: </h4>
+    <p> Avoir un compte : peut se connecter avec son RIB et son mot de passe </p>
+    <img src=""
+  
   
    
